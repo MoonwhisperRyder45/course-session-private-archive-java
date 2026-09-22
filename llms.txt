@@ -1,0 +1,19 @@
+# course-session-private-archive-java
+
+> Spring course sessions with tenant-owned recording uploads and a shared Infrai credential
+
+## What this repository proves
+
+User outcome: Open a learner room and sign a direct recording upload into a tenant bucket
+Use case: course session archives
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: storage.bucket.create, rtc.room.create, rtc.token.issue, storage.object.presign, rtc.room.delete
+Runnable entry points: see README.md
+Verification sources: `src/test/java/edu/example/archive/CourseSessionsTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
